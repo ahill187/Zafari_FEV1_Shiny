@@ -18,54 +18,17 @@ ui <- fluidPage(
 
   sidebarLayout(
 
-
-
     sidebarPanel(
 
-    # h4("Developed by Zafar Zafari"),
-    # h5("This web application is based on the paper entitled 'Individualised prediction of lung function decline in COPD'.
-    #    Authors: Zafar Zafari, Don D. Sin, Dirkje S. Postma, Claes-Goran Lofdahl, Judith Vonk, Stirling Bryan, Rahman Khakban,
-    #    S.F. Paul Man, Donald Tashkin, Robert A. Wise, John E. Connett, Bruce McManus, MD, Raymond Ng, Zsuszanna Hollander,
-    #    Mohsen Sadatsafavi. Please cite this paper when using the results of this web application."),
-    #
-    #
-    # br(),
-    # br(),
-    #
-    # h4("About this Web Application"),
-    #
-    # #br() and hr() produce extra horizontal space, and hr()>br()
-    #
-    # h5("This web application is built for the individualized prediction of lung function decline based on 3 models:
-    #    (1) Prediction of future lung function decline based on baseline FEV1,
-    #    (2) Prediction of future lung function decline based on baseline FEV1 and patients' clinical characteristics,
-    #    and (3) Prediction of future lung function decline based on baseline FEV1, patients' clinical characteristics,
-    #    and 1-year prior history of FEV1. Interested model as well as other patient's characteristics can be selected
-    #    below for seeing the predicted rate of lung function delcine."),
-    #
-    #
-    # br(),
-    # br(),
-    # br(),
-    # br(),
-    #
-
-    selectInput('model', 'Please select your model', c("Basic model with only baseline FEV1", "Complete model with baseline FEV1 and patient's characteristics",
+      selectInput('model', 'Please select your model', c("Basic model with only baseline FEV1", "Complete model with baseline FEV1 and patient's characteristics",
                                                        "Complete model with baseline FEV1 and patient's characteristics (without hyperresponsiveness)",
                                                        "Model with baseline FEV1, 1-year history of FEV1, and patient's characteristics")),
 
-    uiOutput('inputParam'),
-
-    br(),
-    br()
-    #submitButton("xx")
+      uiOutput('inputParam'),
+      br(),
+      br()
     ),
 
-
-  # Show a summary of the dataset and an HTML table with the
-  # requested number of observations. Note the use of the h4
-  # function to provide an additional header above each output
-  # section.
   mainPanel(
 
           tabsetPanel(
@@ -99,7 +62,6 @@ ui <- fluidPage(
   )
 
 ))
-
 
 
 # Define server logic required to draw a histogram
